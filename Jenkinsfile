@@ -9,8 +9,8 @@ pipeline {
         stage('Build') {
             steps {
                 cleanWs()
-                sh("git config --global user.email \"jenkins@codomi.pl\"")
-                sh("git config --global user.name \"Jenkins\"")
+                sh("git config --global user.email \"pawelnowaczek88@gmail.com\"")
+                sh("git config --global user.name \"gonzo333\"")
                 git 'https://github.com/rechandler12/test.git'
                 sh 'mvn -B release:prepare -Dusername=xyz -Dpassword=xyz'
                 sh("mvn -B release:perform -Dgoals='verify -DskipTests'")
